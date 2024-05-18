@@ -1,9 +1,15 @@
 import Todos from './components/Todos';
+import Todo from './models/todo';
+
 
 function App() {
+  const todos = [
+    new Todo("Learn React"),
+    new Todo("Learn React with Typescript")
+  ];
   return (
     <div >
-      <Todos items={["learn react", "Learn TypeScript"]} />
+      <Todos items={todos} />
     </div>
   );
 }
