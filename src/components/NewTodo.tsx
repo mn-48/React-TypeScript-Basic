@@ -12,6 +12,7 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
     }
 
     props.onAddTodo(enteredText);
+    todoTextInput.current!.value = "";
   };
   return (
     <form onSubmit={submitHandler} className={classes.form}>
