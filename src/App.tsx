@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Todos from "./components/Todos";
 import Todo from "./models/todo";
-import NewForm from "./components/NewForm";
+import NewTodo from "./components/NewTodo";
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <NewForm onAddTodo={addTodoHandeler} />
+      <NewTodo onAddTodo={addTodoHandeler} />
       <Todos items={todos} />
     </div>
   );
